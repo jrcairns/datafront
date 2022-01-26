@@ -11,7 +11,7 @@ export default function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<AuthLayout />}>
-          <Route path="/login" element={<LoginPage />} />
+          <Route path="/" element={<LoginPage />} />
         </Route>
       </Routes>
     </div>
