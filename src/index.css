@@ -10,9 +10,11 @@
 
 :root {
   --color-white: #fff;
+  --color-black: #000;
   --color-gray-100: #ededed;
   --color-gray-500: #c3c3c3;
   --color-green-500: #09874d;
+  --color-error: #a30d0d;
   --body-font: 'Roboto';
   --heading-font: 'Roboto';
   --font-bold: 700;
@@ -21,4 +23,5 @@
 
 html {
   font-family: var(--body-font);
+  color: var(--color-black);
 }
