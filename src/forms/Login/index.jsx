@@ -22,19 +22,17 @@ export default function LoginForm() {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
+    try {
+      await api.post(API_KEYS.LOGIN, data)
+    } catch (error) {
+      setServerErrors(error.message)
+    }
+
     // Timeout to mock endpoint call and display loading states
-    return new Promise((resolve, reject) => {
-      setTimeout(async () => {
-        try {
-          await api.post(API_KEYS.LOGIN, data)
-          resolve()
-        } catch (error) {
-          setServerErrors(error.message)
-          reject()
-        }
-      }, 1500)
-    })
+    // return new Promise((resolve) => {
+    //   setTimeout(() => { resolve() }, 1500)
+    // })
   }
 
   return (
