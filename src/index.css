@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
 *,
 *:before,
 *:after {
@@ -7,6 +9,15 @@
 }
 
 :root {
+  --color-white: #fff;
   --color-gray-100: #ededed;
   --color-green-500: #09874d;
+  --body-font: 'Roboto';
+  --heading-font: 'Roboto';
+  --font-bold: 700;
+  --font-semibold: 600;
+}
+
+html {
+  font-family: var(--body-font);
 }
